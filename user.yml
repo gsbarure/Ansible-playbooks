@@ -1,0 +1,12 @@
+---
+  - name: Playbook
+    hosts: all
+    become: yes
+    become_user: root
+    tasks:
+      - name: add list
+        user: name='{{item}}' state=present
+        with_items:
+                - Gajanan
+                - Aditya
+                - Trainwithshubham
